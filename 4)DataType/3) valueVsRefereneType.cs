@@ -33,3 +33,48 @@ namespace valueVsReferenceType
         }
     }
 }
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace valueVsReferenceType
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] myArray1 = { 1, 2, 3 };
+
+            setMethod(myArray1);
+            Console.WriteLine(myArray1[0]); //outputs 7
+
+            myArray1[0] = 1;
+
+            setMethod2(myArray1);
+            Console.WriteLine(myArray1[0]); //outputs 1
+
+            setMethod3(ref myArray1);
+            Console.WriteLine(myArray1[0]); //outputs 0
+
+            Console.ReadKey();
+
+        }
+        static void setMethod(int[] myArray2)   //It takes the address of myArray1 elements.
+        {
+            myArray2[0] = 7;
+        }
+        static void setMethod2(int[] myArray2)
+        {
+            myArray2 = new int[3];             //It passes the copies of first array elements to second array.
+        }
+        static void setMethod3(ref int[] myArray2)
+        {
+            myArray2=new int[3];                // It references the second array to first array and its values are assigned to zero.
+        }
+    }
+}
