@@ -29,6 +29,22 @@ namespace Lists
             {
                 Console.WriteLine(starTechCharacter);
             }
+            
+            Console.WriteLine(starTechCharacters.Count);    //outputs 2
+
+            bool doesContain;
+            doesContain = starTechCharacters.Contains("Mandy"); //returns true
+            doesContain = starTechCharacters.Contains("Kaju");  //returns false
+
+            int index;
+            index = starTechCharacters.IndexOf("Mandy");    //returns 1
+            index = starTechCharacters.IndexOf("Kaju"); //returns -1
+
+            starTechCharacters.Sort();  // sorts in alphabetical order for text data and numerical data
+
+            starTechCharacters.Reverse();   // Reverse the order of elements in the list
+
+            starTechCharacters.Clear(); // Removes all elements; list is empty now
 
             Console.ReadLine();
         }
