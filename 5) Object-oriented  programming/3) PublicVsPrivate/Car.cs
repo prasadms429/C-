@@ -12,6 +12,7 @@ namespace PublicVsPrivate
         private string brand;   // this is field
         private int currentSpeed; // this is field    // By declaring private, we cannot access the fields or methods outside the its class. 
                             //By using this type of class we can only use it and know its functionality and we cannot modify its inside fields or methods.
+                            // This also known as Encapsulation by hiding field and methods outside of the class.
 
         public Car()         
         {
