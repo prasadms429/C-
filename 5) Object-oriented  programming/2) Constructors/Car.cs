@@ -12,7 +12,7 @@ namespace ConstructorLecture
         public string brand;
         public int currentSpeed;
 
-        public Car()        // non-parametraised constructor
+        public Car()         // non-parametraised constructor
         {
             currentSpeed = 0;   // Constructor initializes values when an object is created and we dont need to intialize it again and again.
         }
