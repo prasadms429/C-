@@ -10,6 +10,7 @@ namespace StaticKeyword
     {
         static void Main(string[] args)
         {
+            Math.Round(4.43242); // In this 'Math' method is static because, it doesnt need object to apply math operation on any number.
             Console.WriteLine(Car.GetNumCarObjects()); // outputs 0
             
             Car Car1 = new Car("red","Toyota");
