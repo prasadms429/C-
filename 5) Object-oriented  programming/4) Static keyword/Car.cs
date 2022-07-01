@@ -11,7 +11,8 @@ namespace StaticKeyword
         private string color;   
         private string brand;   
         private int currentSpeed;
-        static private int numCarObjects = 0;
+        static private int numCarObjects = 0;   // Regualar variable creates copies of variable for each object created. But in Static variable its only creates one copy
+                                                // of variable for instantiated class. We access static variable using Class name, without using object name.
 
         public Car()
         {
