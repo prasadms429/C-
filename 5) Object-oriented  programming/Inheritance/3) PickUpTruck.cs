@@ -6,36 +6,23 @@ using System.Threading.Tasks;
 
 namespace Inheritance
 {
-    internal class RaceCar : Car
+    internal class PickUpTruck : Car
     {
-        private int numNitros = 5;
+        public int bedLength;
 
-        public RaceCar(int numNitros) : base()
+        public PickUpTruck(int bedLength) : base()
         {
-            this.numNitros = numNitros;
+            this.bedLength = bedLength;
         }
 
-        public RaceCar(string color,string brand,int numNitros): base(color,brand)
+        public PickUpTruck(string color,string brand,int bedLength):base(color,brand)
         {
-            this.numNitros=numNitros;
+            this.bedLength=bedLength;
         }
 
         public override void DisplayInfo()
         {
-            base.DisplayInfo();
-            Console.WriteLine($"The {color} {brand} is travelling at {currentSpeed} km/h and has {numNitros} nitros");
-        }
-
-        public void useNumNitros()
-        {
-            if(numNitros>0)
-            {
-                Accelerate(20);
-            }
-            else
-            {
-                Console.WriteLine("Out of nitros!");
-            }
+            Console.WriteLine($"The {color} {brand} is travelling at {currentSpeed} km/h and its bed length is {bedLength}");
         }
     }
 }
