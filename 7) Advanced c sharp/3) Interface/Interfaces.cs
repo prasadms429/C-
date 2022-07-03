@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Interface
 {
-    interface IMyInterface  // interfaces allow different objects to expose COMMON functionality and can implement different data type objects using same interface. 
+    interface IMyInterface  // interfaces allow different objects to expose COMMON functionality and can implement different data type objects using same interface and 
+                            // using keyword 'object', if we dont know object data type. 
                             // It is better alternative to implement multiple inheritances .
     {
         void SomeMethod();
